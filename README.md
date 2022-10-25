@@ -87,6 +87,46 @@ $$
 where $D$ denotes the cosine distance matrix with entries
 $D_{ij} = d_\text{cos}(\bar\varphi_i, \bar\varphi_j)$.
 
+Results
+-------
+To try Kolkin's optimal transport based approach to neural stylization, have a
+look at the notebook [`style-transport.ipynb`](style-transport.ipynb).  The
+images below were produced using it.
+
+> **Note**
+> The images included here are lower quality jpeg files.  I have linked them
+> to their lossless png versions.
+
+This first image shows a range of stylization for various different values of
+the content weight parameter.  Kolkin implemented guided transfer, something
+I plan to add to my implementation in the future.  With it, one could
+significantly improve these stylizations.
+
+[![](img/results/karya-to-flowers.jpg)
+](img/results/karya-to-flowers.png)
+
+The following are two sets of stylizations of the same content images in the
+same styles as used to demonstrate various other style transfer methods.  See,
+e.g., my repositories
+[`johnson-fast-style-transfer`](
+https://github.com/mdehling/johnson-fast-style-transfer),
+[`dumoulin-multi-style-transfer`](
+https://github.com/mdehling/dumoulin-multi-style-transfer), and
+[`ghiasi-arbitrary-style-transfer`](
+https://github.com/mdehling/ghiasi-arbitrary-style-transfer).
+
+[![](img/results/content-style-matrix-1.jpg)
+](img/results/content-style-matrix-1.png)
+
+Note that Kolkin's approach to neural stylization seems to transfer style
+image patches.  The method works very well for some content/style combinations
+while requiring careful parameter tuning for others.  E.g., in the first style
+below (Petitjean's _femmes au bain_) a lower content weight or lower learning
+rate should significantly improve the stylization.
+
+[![](img/results/content-style-matrix-2.jpg)
+](img/results/content-style-matrix-2.png)
+
 References
 ----------
 * Kolkin, Salavon, Shakhnarovich - _Style Transfer by Relaxed Optimal

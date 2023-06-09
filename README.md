@@ -41,7 +41,7 @@ metric).  The _relaxed earth movers distance_ between tensors
 $A \in V^{\otimes N}$ and $B \in V^{\otimes M}$ is defined as
 
 $$
-\operatorname{REMD}(A, B) = \max\Bigg(
+\mathop{\text{REMD}}(A, B) = \max\Bigg(
   \frac{1}{N} \sum_i \min_j d(A_i, B_j),
   \frac{1}{M} \sum_j \min_i d(A_i, B_j)
 \Bigg) \quad.
@@ -49,7 +49,7 @@ $$
 
 The _REMD loss_ $l_r$ is the relaxed earth movers distance
 
-$$ l_r(x_s,x_p) = \operatorname{REMD}(\bar\varphi_s, \bar\varphi_p) $$
+$$ l_r(x_s,x_p) = \mathop{\text{REMD}}(\bar\varphi_s, \bar\varphi_p) $$
 
 between the style and pastiche feature tensors with respect to the cosine
 distance $d_\text{cos}(v, w) = 1 - v \cdot w / (\|v\|\cdot\|w\|)$.
@@ -57,7 +57,7 @@ distance $d_\text{cos}(v, w) = 1 - v \cdot w / (\|v\|\cdot\|w\|)$.
 The _color matching loss_ $l_p$ is also defined in terms of the relaxed earth
 movers distance
 
-$$ l_p(x_s,x_p) = \operatorname{REMD}(\bar x_s, \bar x_p) \quad, $$
+$$ l_p(x_s,x_p) = \mathop{\text{REMD}}(\bar x_s, \bar x_p) \quad, $$
 
 this time for the style and pastiche image tensors and with respect to the
 euclidian distance $d_\text{eucl}(v, w) = \|v - w\|_2$.

@@ -10,6 +10,20 @@ The implementation I use here is part of my python package
 module [`kolkin_2019`](
 https://github.com/mdehling/nstesia/blob/main/src/nstesia/kolkin_2019.py).
 
+> [!NOTE]
+> There are two simple ways to run the demo notebook yourself without installing
+> any software on your local machine:
+>
+> 1. View the notebook on GitHub and click the _Open in Colab_ button (requires
+>    a Google account).
+> 2. Create a GitHub Codespace for this repository and run the notebook in
+>    VSCode (requires a GitHub account).
+
+> [!WARNING]
+> You really shouldn't run the demo notebook without a GPU.  Make sure to
+> select the GPU runtime in Colab and only run it in a Codespace if you have
+> access to the GPU beta.
+
 Method
 ------
 Kolkin's approach to neural style transfer is optimization based:  Given a

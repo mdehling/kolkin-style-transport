@@ -1,6 +1,6 @@
 {
     "name": "dev",
-    "image": "docker.io/mdehling/ms-universal-extra:2-focal",
+    "image": "docker.io/mdehling/ubuntu-cuda-dev:2023.11.01",
     "postCreateCommand": "pip install -r requirements-dev.txt",
     "hostRequirements": {
         "cpus": 4,

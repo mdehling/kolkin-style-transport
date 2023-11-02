@@ -1,0 +1,4 @@
+{
+    "name": "test",
+    "image": "docker.io/mdehling/ubuntu-cuda-dev:2023.11.01"
+}
